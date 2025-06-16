@@ -1,6 +1,6 @@
 [project]
 name = "illustris"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python tools for accessing and analyzing Illustris simulation data"
 readme = "README.md"
 license = { file = "LICENSE.md" }
