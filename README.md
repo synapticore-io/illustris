@@ -1,5 +1,7 @@
 # Illustris (Modernized Fork)
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N71WOHZ3)
+
 **Modern Python package for reading and analyzing Illustris simulation data.**
 
 This is a modernized and extended fork of the original [illustris_python](https://github.com/illustristng/illustris_python) package, featuring:
