@@ -5,10 +5,10 @@ description = "Python tools for accessing and analyzing Illustris simulation dat
 readme = "README.md"
 license = "BSD-2-Clause"
 authors = [
-    { name = "Björn Bethge", email = "bjoern.bethge@gmail.com" }
+    { name = "Björn Bethge", email = "helloworld@synapticore.io" }
 ]
 maintainers = [
-    { name = "Björn Bethge", email = "bjoern.bethge@gmail.com" }
+    { name = "Björn Bethge", email = "helloworld@synapticore.io" }
 ]
 requires-python = ">=3.11"
 dependencies = [
