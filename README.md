@@ -29,7 +29,7 @@ uv add illustris
 
 ```bash
 # Clone the repository
-git clone https://github.com/bjoernbethge/illustris.git
+git clone https://github.com/synapticore-io/illustris.git
 cd illustris
 
 # Install with uv (recommended)
@@ -269,7 +269,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Support
 
-- **Documentation**: https://bjoernbethge.github.io/illustris
+- **Documentation**: https://synapticore-io.github.io/illustris
 - **TNG Project**: https://www.tng-project.org/
 - **API Documentation**: https://www.tng-project.org/data/docs/api/
 
