@@ -3,14 +3,14 @@ name = "illustris"
 version = "0.1.1"
 description = "Python tools for accessing and analyzing Illustris simulation data"
 readme = "README.md"
-license = { file = "LICENSE.md" }
+license = "BSD-2-Clause"
 authors = [
     { name = "Björn Bethge", email = "bjoern.bethge@gmail.com" }
 ]
 maintainers = [
     { name = "Björn Bethge", email = "bjoern.bethge@gmail.com" }
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
     "h5py>=3.14.0",
     "numpy>=2.2.6",
@@ -22,7 +22,7 @@ keywords = ["astronomy", "simulation", "illustris", "cosmology", "astrophysics"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: BSD License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.11",
@@ -34,10 +34,10 @@ classifiers = [
 
 [project.urls]
 Homepage = "https://www.illustris-project.org/"
-Documentation = "https://your-docs-url.com"
-Repository = "https://github.com/bjoernbethge/illustris"
-Issues = "https://github.com/bjoernbethge/illustris/issues"
-Changelog = "https://github.com/bjoernbethge/illustris/releases"
+Documentation = "https://synapticore-io.github.io/illustris"
+Repository = "https://github.com/synapticore-io/illustris"
+Issues = "https://github.com/synapticore-io/illustris/issues"
+Changelog = "https://github.com/synapticore-io/illustris/releases"
 
 [project.scripts]
 illustris = "illustris.cli:main"
@@ -63,24 +63,13 @@ link-mode = "copy"
 
 [dependency-groups]
 dev = [
-    "coverage>=7.8.2",
-    "sphinx>=8.2.3",
     "pytest>=8.0.0",
     "pytest-cov>=6.0.0",
-    "black>=24.0.0",
-    "ruff>=0.8.0",
-    "mypy>=1.13.0",
-]
-docs = [
     "sphinx>=8.2.3",
     "sphinx-rtd-theme>=3.0.0",
     "myst-parser>=4.0.0",
     "linkify-it-py>=2.0.0",
-]
-test = [
-    "pytest>=8.0.0",
-    "pytest-cov>=6.0.0",
-    "coverage>=7.8.2",
+    "ruff>=0.8.0",
 ]
 
 [tool.pytest.ini_options]
@@ -127,27 +116,11 @@ exclude_lines = [
     "@(abc\\.)?abstractmethod",
 ]
 
-[tool.black]
-line-length = 88
-target-version = ["py311"]
-include = '\.pyi?$'
-extend-exclude = '''
-/(
-  # directories
-  \.eggs
-  | \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | build
-  | dist
-)/
-'''
-
 [tool.ruff]
 target-version = "py311"
 line-length = 88
+
+[tool.ruff.lint]
 select = [
     "E",  # pycodestyle errors
     "W",  # pycodestyle warnings
@@ -158,28 +131,11 @@ select = [
     "UP", # pyupgrade
 ]
 ignore = [
-    "E501",  # line too long, handled by black
+    "E501",  # line too long, handled by ruff format
     "B008",  # do not perform function calls in argument defaults
     "C901",  # too complex
 ]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
 "tests/**/*" = ["B011"]
-
-[tool.mypy]
-python_version = "3.11"
-check_untyped_defs = true
-disallow_any_generics = true
-disallow_incomplete_defs = true
-disallow_untyped_decorators = true
-disallow_untyped_defs = true
-ignore_missing_imports = true
-no_implicit_optional = true
-show_error_codes = true
-strict_equality = true
-warn_redundant_casts = true
-warn_return_any = true
-warn_unreachable = true
-warn_unused_configs = true
-warn_unused_ignores = true
